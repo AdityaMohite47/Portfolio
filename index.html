@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Aditya - Developer Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: "Poppins", serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        background-color: rgb(1, 1, 62);
+      }
+      nav ul{
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li{
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a{
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover{
+        color: rgb(133, 133, 233);
+        font-size: 1.01rem;
+      }
+      .left{
+        font-size: larger;
+
+      }
+      .first{
+        display: flex;
+        justify-content: space-between;
+        padding: 100px;
+        margin: 0px 200px 0px 50px; 
+        align-items: center;
+        border-right: 80px;
+      }
+      .first > div{
+        width: 30% ;
+      }
+      .leftSection > img{
+        width: 700px;
+        max-width: 800px; 
+      }
+
+      .rightSection img {
+        height: 350px;
+        width: 500px;
+        object-fit: fill;
+      }
+      .second{
+        max-width: 88vw;
+        margin: auto;
+        font-size: 1rem;
+        height: 80vh;
+      }
+
+      main > hr{
+        border: 0;
+        background-color: rgb(153, 153, 240);
+        height: 1.2px;
+        margin : 40px 84px;
+      }
+
+      .text-gray{
+        color: gray;
+      }
+
+      .second .box {
+        background-color: white;
+        width: 80vw;
+        height: 2px;
+        margin: 54px 0;
+        display: flex;
+      }
+
+      .second .vertical{
+    height: 150px; /* Increase as needed for better visuals */
+    width: 1px;
+    background-color: white;
+    position: relative; /* Necessary for positioning the image */
+    display: flex;
+    justify-content: center; /* Centering image horizontally */
+    align-items: center; /* Centering image vertically */
+      }
+      .box {
+    background-color: white;
+    width: 80vw;
+    height: 2px;
+    margin: 54px 0;
+    display: flex;
+    justify-content: space-between; /* Ensures spacing between vertical lines */
+  }
+
+  .web-img {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.web-img.visible {
+  opacity: 1;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <header>
+
+      <nav>
+
+        <div class="left">Aditya's Portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
+        </div>
+
+      </nav>
+
+    </header>
+
+    <main>
+        <section class="first">
+            <div class="leftSection">
+              <img src="https://readme-typing-svg.demolab.com?font=&size=25&pause=1000&color=F7F7F7&width=435&lines=Hi+there!👋+I+am+Aditya+Mohite" alt="Typing SVG" />
+            </div>
+            <div class="rightSection">
+                <img src="dev_image.webp" class="dev-img">
+            </div>
+        </section>
+        <!-- <hr class="hr-sep"> -->
+        <section class="second">
+          <h1> My Ongoing Journey 🚀</h1>
+          <span class="text-gray"> Timeline of what I've done so far...</span>
+
+          <div class="image-container">
+            <img src="web.png" class="web-img">
+          </div>
+        </section>
+    </main>
+  </body>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const webImage = document.querySelector('.web-img');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('visible', entry.isIntersecting);
+        });
+      }, { threshold: 0.1 });
+    
+      if (webImage) {
+        observer.observe(webImage);
+      }
+    });
+    
+    </script>
+</html>
