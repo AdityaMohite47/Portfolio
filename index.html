@@ -40,11 +40,8 @@
         color: rgb(133, 133, 233);
         font-size: 1.01rem;
       }
-      .left{
-        font-size: larger;
 
-      }
-      .first{
+      .Intro{
         display: flex;
         justify-content: space-between;
         padding: 100px;
@@ -52,71 +49,58 @@
         align-items: center;
         border-right: 80px;
       }
-      .first > div{
+      .Intro > div{
         width: 30% ;
       }
-      .leftSection > img{
+      .Intro > .left > img{
         width: 700px;
-        max-width: 800px; 
       }
 
-      .rightSection img {
-        height: 350px;
-        width: 500px;
+      .Intro >.right img {
+        width: 550px;
+        height: 375px;
         object-fit: fill;
       }
-      .second{
+
+      .Journey{
         max-width: 88vw;
         margin: auto;
-        font-size: 1rem;
+        margin-top: 15px;
+        font-size: 20px;
         height: 80vh;
-      }
-
-      main > hr{
-        border: 0;
-        background-color: rgb(153, 153, 240);
-        height: 1.2px;
-        margin : 40px 84px;
       }
 
       .text-gray{
         color: gray;
       }
 
-      .second .box {
-        background-color: white;
-        width: 80vw;
-        height: 2px;
-        margin: 54px 0;
+      .webintro{
+        align-items: center;
+        justify-content: space-between;
         display: flex;
       }
 
-      .second .vertical{
-    height: 150px; /* Increase as needed for better visuals */
-    width: 1px;
-    background-color: white;
-    position: relative; /* Necessary for positioning the image */
-    display: flex;
-    justify-content: center; /* Centering image horizontally */
-    align-items: center; /* Centering image vertically */
+      .webimg{
+        margin-top: 50px;
       }
-      .box {
-    background-color: white;
-    width: 80vw;
-    height: 2px;
-    margin: 54px 0;
-    display: flex;
-    justify-content: space-between; /* Ensures spacing between vertical lines */
-  }
 
-  .web-img {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
+      .webtxt {
+        margin-left: 50px;
+        margin-bottom: 100px;
+      }
 
-.web-img.visible {
-  opacity: 1;
-}
+      .desc{
+        color: white;
+        font-size: large;
+      }
+
+      .programming{
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        
+      }
+      
 
     </style>
   </head>
@@ -126,12 +110,10 @@
 
       <nav>
 
-        <div class="left">Aditya's Portfolio</div>
+        <div class="left"><h1>Aditya's Portfolio</h1></div>
         <div class="right">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
+                <li id="Journey-btn"><a href="#">My Journey</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact Me</a></li>
             </ul>
@@ -142,40 +124,87 @@
     </header>
 
     <main>
-        <section class="first">
-            <div class="leftSection">
+        <section class="Intro">
+            <div class="left">
               <img src="https://readme-typing-svg.demolab.com?font=&size=25&pause=1000&color=F7F7F7&width=435&lines=Hi+there!👋+I+am+Aditya+Mohite" alt="Typing SVG" />
             </div>
-            <div class="rightSection">
-                <img src="dev_image.webp" class="dev-img">
+            <div class="right">
+                <img src="dev_image.webp">
             </div>
         </section>
-        <!-- <hr class="hr-sep"> -->
-        <section class="second">
+
+        <section class="Journey" id="Journey">
+
+          <div class="heading">
           <h1> My Ongoing Journey 🚀</h1>
           <span class="text-gray"> Timeline of what I've done so far...</span>
-
-          <div class="image-container">
-            <img src="web.png" class="web-img">
           </div>
+          
+          <!-- html-css-js -->
+        <div class="webintro">
+
+          <div class="webimg">
+            <img src="html-css-js.jpg" style="block-size: 300px;">
+          </div>
+
+          <div class="webtxt">
+            <span class="desc">Got Introduced to HTML-CSS-JS under IT as my Bifocal Subject while Higher-Secondary Education.
+              Thus I got Intrested with Programming in general.</span>
+          </div>
+
+          </div>
+
+          <!-- C++ & Python -->
+          <div class="programming">
+
+            <div class="programmingtxt">
+              <span class="desc">
+                After my Higher-Secondary Education, I decided to Pursue Computer Science Degree <br>
+                and Started Learning C & Shifted to C++.And with a slow pace in 3-4 months I grasped <br>
+                the based of OOPs and C++. Then Started with Python and soon it too become familiar <br>
+                to code in. Overall I become a Student with Strong Fundamentals.
+              </span>
+            </div>
+
+            <div class="programming-imgs" style="padding-right:20px;">
+              <a href="https://icons8.com/icon/40669/c"><img src="icons8-c++.png"></a>
+              <a href="https://icons8.com/icon/set/python/color"><img src="icons8-python.png"></a>
+            </div>
+
+        </div>
+
+        <div class="programming">
+
+          <div class="ML-imgs" style= "margin-top: 50px;">
+            <a href="https://icons8.com/icon/set/numpy/color"><img src="icons8-numpy.png"></a>
+            <a href="https://icons8.com/icon/set/pandas/color"><img src="icons8-pandas.png"></a><br>
+            <img src="scikit-learn.webp" style="block-size: 144px;">&nbsp; &nbsp; &nbsp; &nbsp;
+            <img src="pytorch.webp" style="block-size: 144px;">
+          </div>
+
+          <div class="ML-txt" style="margin-bottom: 100px;">
+            <span class="desc">
+              Got Intrested in Machine Learning domain in Summer-2024 so I Explored and learned Python Libraries :<br>
+              Numpy, Pandas, Matplotlib, Seaborn, And Scikit-Learn.<br> <br>
+              I'm further Intrested in Deep Learning and Already Started with it with PyTroch ! But Side-by-Side Improving <br>
+              my Data Handling Skills.
+            </span>
+          </div>
+
+      </div>
+          
         </section>
+
+        <section id="projects" class="projects">
+
+        </section>
+
     </main>
+
+    <script>
+      document.getElementById("Journey-btn").addEventListener("click", function() {
+          document.getElementById("Journey").scrollIntoView({ behavior: "smooth" });
+      });
+  </script>
   </body>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const webImage = document.querySelector('.web-img');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          entry.target.classList.toggle('visible', entry.isIntersecting);
-        });
-      }, { threshold: 0.1 });
-    
-      if (webImage) {
-        observer.observe(webImage);
-      }
-    });
-    
-    </script>
 </html>
