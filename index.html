@@ -17,6 +17,48 @@
         color: white;
         font-family: "Poppins", serif;
       }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .Intro {
+        flex-direction: column;
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .Intro > div {
+        width: 100%;
+    }
+
+    .Journey {
+        font-size: 16px;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+  }
+  /*  Original CSS */
       nav {
         display: flex;
         justify-content: space-around;
@@ -60,9 +102,11 @@
       .Intro > div{
         width: 30% ;
       }
-      .Intro > .left > img{
-        width: 700px;
-      }
+      .Intro > .left > img {
+    max-width: 100%;
+    height: auto;
+}
+
 
       .Intro >.right img {
         width: 550px;
@@ -105,11 +149,13 @@
         align-items: center;
         justify-content: space-between;
         display: flex;
+        flex-wrap: wrap;
       }
       .Machine-Learning{
         align-items: center;
         justify-content: space-between;
         display: flex;
+        flex-wrap: wrap;
       }
 
       .Projects{
@@ -188,7 +234,7 @@
             <ul>
                 <li id="Journey-btn"><a href="#">My Journey</a></li>
                 <li id="Projects-btn"><a href="#">Projects</a></li>
-                <li id="Contact-btn"><a href="">Contact Me</a></li>
+                <li id="Contact-btn"><a href="#">Contact Me</a></li>
             </ul>
         </div>
 
