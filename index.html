@@ -18,47 +18,6 @@
         font-family: "Poppins", serif;
       }
 
-      /* Mobile Responsiveness */
-      @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .Intro {
-        flex-direction: column;
-        padding: 20px;
-        margin: 0;
-        text-align: center;
-    }
-
-    .Intro > div {
-        width: 100%;
-    }
-
-    .Journey {
-        font-size: 16px;
-    }
-
-    .project-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 90%;
-    }
-  }
-  /*  Original CSS */
       nav {
         display: flex;
         justify-content: space-around;
@@ -103,9 +62,8 @@
         width: 30% ;
       }
       .Intro > .left > img {
-    max-width: 100%;
-    height: auto;
-}
+        block-size: 75px;
+  }
 
 
       .Intro >.right img {
@@ -129,6 +87,7 @@
         align-items: center;
         justify-content: space-between;
         display: flex;
+        flex-wrap: wrap;
       }
 
       .webimg{
@@ -149,13 +108,11 @@
         align-items: center;
         justify-content: space-between;
         display: flex;
-        flex-wrap: wrap;
       }
       .Machine-Learning{
         align-items: center;
         justify-content: space-between;
         display: flex;
-        flex-wrap: wrap;
       }
 
       .Projects{
