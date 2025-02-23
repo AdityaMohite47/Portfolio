@@ -8,10 +8,94 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Aditya - Developer Portfolio</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
+      @media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  nav ul li {
+    margin: 5px 15px;
+  }
+
+  .Intro {
+    flex-direction: column;
+    padding: 50px 20px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .Intro > div {
+    width: 100% !important;
+    margin: 20px 0;
+  }
+
+  .Intro .right img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+
+  .webintro,
+  .programming,
+  .Machine-Learning {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .webimg img {
+    block-size: 200px !important;
+    margin: 0 auto;
+  }
+
+  .webtxt,
+  .programmingtxt,
+  .ML-txt {
+    margin: 20px 0 !important;
+    padding: 0 15px;
+  }
+
+  .programming-imgs,
+  .ML-imgs {
+    text-align: center;
+    padding: 20px 0 !important;
+  }
+
+  .project-card {
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+
+  .project-container {
+    gap: 20px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Adjust font sizes */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .desc {
+    font-size: 1rem !important;
+    line-height: 1.5;
+  }
+}
       body {
         background-color: rgb(3, 3, 55);
         color: white;
@@ -48,7 +132,7 @@
      a:hover {
     color: #ffcc00; /* Changes color on hover */
     text-decoration: underline; /* Adds underline back on hover */
-}
+    }
 
       .Intro{
         display: flex;
@@ -155,27 +239,28 @@
 }
 
 .footer {
-        background-color: rgb(1, 1, 62);
-        text-align: center;
-        padding: 20px;
-        margin-top: 50px;
+    background-color: rgb(1, 1, 62);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
       }
-      .footer h2 {
-        margin-bottom: 15px;
-      }
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-      .social-icons a {
-        color: white;
-        font-size: 30px;
-        transition: 0.3s;
-      }
-      .social-icons a:hover {
-        color: rgb(133, 133, 233);
-      }  
+  .footer h2 {
+    margin-bottom: 15px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .social-icons a {
+    color: white;
+    font-size: 30px;
+    transition: 0.3s;
+  }
+  .social-icons a:hover {
+    color: rgb(133, 133, 233);
+  } 
+
 
     </style>
   </head>
