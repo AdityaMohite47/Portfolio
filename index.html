@@ -12,92 +12,71 @@
         margin: 0;
         padding: 0;
       }
-      @media screen and (max-width: 768px) {
+      <style>
+/* ===== Base Fluid Styles ===== */
+:root {
+  --max-container-width: 1440px;
+  --min-container-width: 320px;
+}
+
+html {
+  font-size: 100%; /* 16px base */
+}
+
+body {
+  font-size: clamp(1rem, 0.75rem + 0.5vw, 1.25rem); /* Fluid typography */
+}
+
+/* ===== Container-Based Layouts ===== */
+.container {
+  width: min(90%, var(--max-container-width));
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+
+/* ===== Multiple Breakpoint System ===== */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 36em) { /* 576px */
+  .intro-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 48em) { /* 768px */
   nav {
-    flex-direction: column;
-    height: auto;
-    padding: 20px 0;
+    flex-direction: row;
   }
+}
 
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 15px;
-  }
-
-  nav ul li {
-    margin: 5px 15px;
-  }
-
-  .Intro {
-    flex-direction: column;
-    padding: 50px 20px;
-    margin: 0;
-    text-align: center;
-  }
-
-  .Intro > div {
-    width: 100% !important;
-    margin: 20px 0;
-  }
-
-  .Intro .right img {
-    width: 100%;
-    height: auto;
-    max-width: 400px;
-  }
-
-  .webintro,
-  .programming,
-  .Machine-Learning {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .webimg img {
-    block-size: 200px !important;
-    margin: 0 auto;
-  }
-
-  .webtxt,
-  .programmingtxt,
-  .ML-txt {
-    margin: 20px 0 !important;
-    padding: 0 15px;
-  }
-
-  .programming-imgs,
-  .ML-imgs {
-    text-align: center;
-    padding: 20px 0 !important;
-  }
-
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 62em) { /* 992px */
   .project-card {
-    width: 90%;
-    margin: 0 auto 30px;
+    width: 45%;
   }
+}
 
-  .project-container {
-    gap: 20px;
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 75em) { /* 1200px */
+  .hero-section {
+    padding: 8rem 0;
   }
+}
 
-  .social-icons {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
+/* ===== Fluid Spacing ===== */
+.section {
+  padding: clamp(2rem, 1rem + 3vw, 5rem) 0;
+}
 
-  /* Adjust font sizes */
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .desc {
-    font-size: 1rem !important;
-    line-height: 1.5;
+/* ===== Container Queries ===== */
+@container (width > 400px) {
+  .card {
+    flex-direction: row;
   }
 }
       body {
